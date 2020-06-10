@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_uis/pages/my_column.dart';
 import 'package:test_uis/pages/my_stateless_widget.dart';
+import 'package:test_uis/pages/ui_absorb_pointer.dart';
 import 'package:test_uis/pages/ui_align.dart';
 import 'package:test_uis/pages/ui_aspect_ratio.dart';
 import 'package:test_uis/pages/ui_buttons.dart';
@@ -11,6 +12,7 @@ import 'package:test_uis/pages/ui_row.dart';
 import 'package:test_uis/pages/ui_scaffold.dart';
 import 'package:test_uis/pages/ui_size_overflow_box.dart';
 import 'package:test_uis/pages/ui_sized_box.dart';
+import 'package:test_uis/pages/ui_tutorial.dart';
 
 class App extends StatelessWidget {
   App({Key key}) : super(key: key);
@@ -27,6 +29,8 @@ class App extends StatelessWidget {
     "sizedBox 使用": (BuildContext context) => UiSizedBox(),
     "ContrainedBox 使用": (BuildContext context) => UiContainedBox(),
     "IndexedStack 使用": (BuildContext context) => UiIndexedStack(),
+    "Layout Tutorial 使用": (BuildContext context) => UiTutorial(),
+    "AbsorbPointer 使用(包括弹出框)": (BuildContext context) => UiAbsorbPointer(),
   };
 
   @override
