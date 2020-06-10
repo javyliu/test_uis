@@ -3,6 +3,7 @@ import 'package:test_uis/pages/my_column.dart';
 import 'package:test_uis/pages/my_stateless_widget.dart';
 import 'package:test_uis/pages/ui_absorb_pointer.dart';
 import 'package:test_uis/pages/ui_align.dart';
+import 'package:test_uis/pages/ui_animated_container.dart';
 import 'package:test_uis/pages/ui_aspect_ratio.dart';
 import 'package:test_uis/pages/ui_buttons.dart';
 import 'package:test_uis/pages/ui_contrained_box.dart';
@@ -31,6 +32,7 @@ class App extends StatelessWidget {
     "IndexedStack 使用": (BuildContext context) => UiIndexedStack(),
     "Layout Tutorial 使用": (BuildContext context) => UiTutorial(),
     "AbsorbPointer 使用(包括弹出框)": (BuildContext context) => UiAbsorbPointer(),
+    "AnimatedContainer 使用": (BuildContext context) => UiAnimatedContainer(),
   };
 
   @override
@@ -40,7 +42,7 @@ class App extends StatelessWidget {
       body: ListView.builder(
         // padding: const EdgeInsets.all(8),
         scrollDirection: Axis.vertical,
-        reverse: true,
+        // reverse: true,
         itemCount: routes.length,
         itemBuilder: (context, index) {
           String key = routes.keys.toList()[index];

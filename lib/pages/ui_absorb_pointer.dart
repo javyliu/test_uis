@@ -65,10 +65,10 @@ class UiAbsorbPointer extends StatelessWidget {
               ),
             ],
           );
-        } ,
+        },
       );
       if (i != null) {
-        print("选择了： ${i==1 ? '简体中文' : '英文'}");
+        print("选择了： ${i == 1 ? '简体中文' : '英文'}");
       }
     }
 
@@ -77,6 +77,9 @@ class UiAbsorbPointer extends StatelessWidget {
         absorbing: false,
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 40,
+            ),
             RaisedButton(
               child: Text('测试点击屏蔽1'),
               color: Colors.amber,
@@ -93,6 +96,7 @@ class UiAbsorbPointer extends StatelessWidget {
                 _changeLanguage();
               },
             ),
+      
           ],
         ),
       ),
