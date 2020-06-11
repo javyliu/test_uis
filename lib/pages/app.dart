@@ -4,13 +4,20 @@ import 'package:test_uis/pages/my_stateless_widget.dart';
 import 'package:test_uis/pages/ui_absorb_pointer.dart';
 import 'package:test_uis/pages/ui_align.dart';
 import 'package:test_uis/pages/ui_animated_container.dart';
+import 'package:test_uis/pages/ui_animated_switcher.dart';
+import 'package:test_uis/pages/ui_animated_widget.dart';
 import 'package:test_uis/pages/ui_aspect_ratio.dart';
+import 'package:test_uis/pages/ui_base_animation.dart';
+import 'package:test_uis/pages/ui_bottom_navigation_bar.dart';
 import 'package:test_uis/pages/ui_buttons.dart';
 import 'package:test_uis/pages/ui_contrained_box.dart';
+import 'package:test_uis/pages/ui_hero.dart';
 import 'package:test_uis/pages/ui_indexed_stack.dart';
 import 'package:test_uis/pages/ui_overflow_box.dart';
+import 'package:test_uis/pages/ui_progress_indicator.dart';
 import 'package:test_uis/pages/ui_row.dart';
 import 'package:test_uis/pages/ui_scaffold.dart';
+import 'package:test_uis/pages/ui_simultaneous_animation.dart';
 import 'package:test_uis/pages/ui_size_overflow_box.dart';
 import 'package:test_uis/pages/ui_sized_box.dart';
 import 'package:test_uis/pages/ui_tutorial.dart';
@@ -33,6 +40,13 @@ class App extends StatelessWidget {
     "Layout Tutorial 使用": (BuildContext context) => UiTutorial(),
     "AbsorbPointer 使用(包括弹出框)": (BuildContext context) => UiAbsorbPointer(),
     "AnimatedContainer 使用": (BuildContext context) => UiAnimatedContainer(),
+    "AnimatedSwitcher 使用": (BuildContext context) => UiAnimatedSwitcher(),
+    "ScaleAnimation (base animation) 使用": (BuildContext context) => UiBaseAnimation(),
+    "AnimatedWidget 使用": (BuildContext context) => UiAnimatedWidget(),
+    "Hero 使用": (BuildContext context) => UiHeroA(),
+    "同时执行动画": (BuildContext context) => UiLogoApp(),
+    "底部导航": (BuildContext context) => UiBottomNavigationBar(),
+    "进度条": (BuildContext context) => UiProgressIndicator(),
   };
 
   @override
