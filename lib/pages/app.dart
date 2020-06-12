@@ -20,6 +20,7 @@ import 'package:test_uis/pages/ui_scaffold.dart';
 import 'package:test_uis/pages/ui_simultaneous_animation.dart';
 import 'package:test_uis/pages/ui_size_overflow_box.dart';
 import 'package:test_uis/pages/ui_sized_box.dart';
+import 'package:test_uis/pages/ui_tab_bar.dart';
 import 'package:test_uis/pages/ui_tutorial.dart';
 
 class App extends StatelessWidget {
@@ -47,6 +48,7 @@ class App extends StatelessWidget {
     "同时执行动画": (BuildContext context) => UiLogoApp(),
     "底部导航": (BuildContext context) => UiBottomNavigationBar(),
     "进度条": (BuildContext context) => UiProgressIndicator(),
+    "AppBar 底部导航Tab": (BuildContext context) => UiTabBar(),
   };
 
   @override
@@ -54,6 +56,7 @@ class App extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("样列UI")),
       body: ListView.builder(
+        physics: const AlwaysScrollableScrollPhysics(),
         // padding: const EdgeInsets.all(8),
         scrollDirection: Axis.vertical,
         // reverse: true,
