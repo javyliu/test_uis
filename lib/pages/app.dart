@@ -10,7 +10,9 @@ import 'package:test_uis/pages/ui_aspect_ratio.dart';
 import 'package:test_uis/pages/ui_base_animation.dart';
 import 'package:test_uis/pages/ui_bottom_navigation_bar.dart';
 import 'package:test_uis/pages/ui_buttons.dart';
+import 'package:test_uis/pages/ui_card.dart';
 import 'package:test_uis/pages/ui_contrained_box.dart';
+import 'package:test_uis/pages/ui_dismissible.dart';
 import 'package:test_uis/pages/ui_hero.dart';
 import 'package:test_uis/pages/ui_indexed_stack.dart';
 import 'package:test_uis/pages/ui_overflow_box.dart';
@@ -49,6 +51,8 @@ class App extends StatelessWidget {
     "底部导航": (BuildContext context) => UiBottomNavigationBar(),
     "进度条": (BuildContext context) => UiProgressIndicator(),
     "AppBar 底部导航Tab": (BuildContext context) => UiTabBar(),
+    "Card 使用and Chip": (BuildContext context) => UiCard(),
+    "Dismissible 使用": (BuildContext context) => UiDismissible(),
   };
 
   @override

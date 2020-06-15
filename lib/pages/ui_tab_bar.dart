@@ -40,19 +40,14 @@ class _UiTabBarState extends State<UiTabBar> with SingleTickerProviderStateMixin
   List<Widget> _drawerChildern(void _callback()) {
     return <Widget>[
       UiDrawerHeader(),
-      ListTile(
-        onTap: _callback,
-        leading: Icon(Icons.message),
-        title: Text("用户信息"),
-        trailing: Icon(Icons.arrow_right),
-      ),
-      Divider(height: 2,color: Colors.red),
+      ListTile(onTap: _callback, leading: Icon(Icons.message), title: Text("用户信息"), trailing: Icon(Icons.arrow_right)),
+      Divider(height: 2, color: Colors.red),
       ListTile(onTap: _callback, leading: Icon(Icons.person), title: Text("账号"), trailing: Icon(Icons.arrow_right)),
-      Divider(height: 2,color: Colors.red),
+      Divider(height: 2, color: Colors.red),
       ListTile(onTap: _callback, leading: Icon(Icons.account_circle), title: Text("简况"), trailing: Icon(Icons.arrow_right)),
-      Divider(height: 2,color: Colors.red),
+      Divider(height: 2, color: Colors.red),
       ListTile(onTap: _callback, leading: Icon(Icons.settings), title: Text("配置"), trailing: Icon(Icons.arrow_right)),
-      Divider(height: 2,color: Colors.red),
+      Divider(height: 2, color: Colors.red),
       ListTile(onTap: _callback, leading: Icon(Icons.change_history), title: Text("更改历史"), trailing: Icon(Icons.arrow_right)),
     ];
   }
@@ -77,7 +72,7 @@ class _UiTabBarState extends State<UiTabBar> with SingleTickerProviderStateMixin
         // ),
         bottom: TabBar(
           controller: _tabController,
-          tabs: _tabMapAry.map((item) => Tab(text: item['title'],)).toList(),
+          tabs: _tabMapAry.map((item) => Tab(text: item['title'])).toList(),
           isScrollable: true,
           indicatorColor: Colors.amber,
         ),
