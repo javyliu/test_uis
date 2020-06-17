@@ -13,6 +13,7 @@ import 'package:test_uis/pages/ui_buttons.dart';
 import 'package:test_uis/pages/ui_card.dart';
 import 'package:test_uis/pages/ui_contrained_box.dart';
 import 'package:test_uis/pages/ui_dismissible.dart';
+import 'package:test_uis/pages/ui_flutter_slidable.dart';
 import 'package:test_uis/pages/ui_hero.dart';
 import 'package:test_uis/pages/ui_indexed_stack.dart';
 import 'package:test_uis/pages/ui_overflow_box.dart';
@@ -53,6 +54,7 @@ class App extends StatelessWidget {
     "AppBar 底部导航Tab": (BuildContext context) => UiTabBar(),
     "Card 使用and Chip": (BuildContext context) => UiCard(),
     "Dismissible 使用": (BuildContext context) => UiDismissible(),
+    "Flutter slidable 使用": (BuildContext context) => UiFlutterSlidable(),
   };
 
   @override
