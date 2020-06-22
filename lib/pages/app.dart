@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_uis/pages/cookbook.dart';
 import 'package:test_uis/pages/my_column.dart';
 import 'package:test_uis/pages/my_stateless_widget.dart';
 import 'package:test_uis/pages/ui_absorb_pointer.dart';
@@ -28,7 +29,7 @@ import 'package:test_uis/pages/ui_tutorial.dart';
 
 class App extends StatelessWidget {
   App({Key key}) : super(key: key);
-  final Map<String, Function> routes = {
+  final Map<String, dynamic> routes = {
     "AppBar 使用": (BuildContext context) => MyStatelessWidget(),
     "Column 使用": (BuildContext context) => MyColumn(),
     "Button 使用": (BuildContext context) => UiButton(),
@@ -55,32 +56,41 @@ class App extends StatelessWidget {
     "Card 使用and Chip": (BuildContext context) => UiCard(),
     "Dismissible 使用": (BuildContext context) => UiDismissible(),
     "Flutter slidable 使用": (BuildContext context) => UiFlutterSlidable(),
+    UiCookBook.demoName: "/cookbook",
   };
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("样列UI")),
-      body: ListView.builder(
+      body: ListView.separated(
+        separatorBuilder: (BuildContext context, int index) => Divider(
+          color: Colors.grey,
+          height: 1,
+        ),
+
         physics: const AlwaysScrollableScrollPhysics(),
         // padding: const EdgeInsets.all(8),
         scrollDirection: Axis.vertical,
+        padding: EdgeInsets.only(bottom: 0),
         // reverse: true,
         itemCount: routes.length,
         itemBuilder: (context, index) {
           String key = routes.keys.toList()[index];
           print("------------$index------------");
           return SizedBox(
-            height: 50,
-            child: RaisedButton(
-              // color: Colors.teal[50],
+            height: 60,
+            child: FlatButton(
+              color: Colors.teal[50],
+              // padding: EdgeInsets.only(top:0, bottom:0),
               child: Align(child: Text(key, textAlign: TextAlign.left), alignment: Alignment.centerLeft),
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: routes[key],
-                ),
-              ),
+              onPressed: () {
+                if (routes[key] is String) {
+                  return Navigator.pushNamed(context, routes[key]);
+                } else {
+                  return Navigator.push(context, MaterialPageRoute(builder: routes[key]));
+                }
+              },
             ),
           );
         },

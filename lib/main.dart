@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_uis/pages/app.dart';
+import 'package:test_uis/routes/routes.dart';
 
 
 void main() {
@@ -11,11 +12,11 @@ class MyApp extends StatelessWidget {
   static const String _title = 'Flutter Widget test';
 
   @override
-  Widget build(BuildContext context) {
-   
+  Widget build(BuildContext context) {  
 
     return MaterialApp(
       title: _title,
+      routes: AppRoute.routes,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
