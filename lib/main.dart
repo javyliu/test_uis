@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       title: _title,
       routes: AppRoute.routes,
       debugShowCheckedModeBanner: false,
+      // showSemanticsDebugger: true,
       theme: ThemeData(
         // This is the theme of your application.
         //
